@@ -1,0 +1,7 @@
+E:\team\Packages\Artworks\src\Artworks.Routing\bin\Debug\Artworks.Routing.dll
+E:\team\Packages\Artworks\src\Artworks.Routing\bin\Debug\Artworks.Routing.pdb
+E:\team\Packages\Artworks\src\Artworks.Routing\bin\Debug\Artworks.dll
+E:\team\Packages\Artworks\src\Artworks.Routing\bin\Debug\Artworks.pdb
+E:\team\Packages\Artworks\src\Artworks.Routing\obj\Debug\Artworks.Routing.csprojResolveAssemblyReference.cache
+E:\team\Packages\Artworks\src\Artworks.Routing\obj\Debug\Artworks.Routing.dll
+E:\team\Packages\Artworks\src\Artworks.Routing\obj\Debug\Artworks.Routing.pdb

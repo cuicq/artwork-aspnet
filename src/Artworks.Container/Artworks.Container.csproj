@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FA050F1-107B-4BDD-8428-9404384FF818}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Artworks.Container</RootNamespace>
+    <AssemblyName>Artworks.Container</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonModel\Container.cs" />
+    <Compile Include="CommonModel\ContainerException.cs" />
+    <Compile Include="CommonModel\Container~.cs" />
+    <Compile Include="CommonModel\Internal\ExceptionHelper.cs" />
+    <Compile Include="CommonModel\TypeRegistry.cs" />
+    <Compile Include="CommonModel\TypeRegistryMode.cs" />
+    <Compile Include="Expressions\ConcreteTypeExpression.cs" />
+    <Compile Include="Expressions\ConfigurationExpression.cs" />
+    <Compile Include="Expressions\IInitializationExpression.cs" />
+    <Compile Include="Expressions\IInstanceExpression.cs" />
+    <Compile Include="Expressions\InitializationExpression.cs" />
+    <Compile Include="Expressions\InstanceExpression.cs" />
+    <Compile Include="Expressions\PluginTypeExpression.cs" />
+    <Compile Include="CommonModel\IContainer.cs" />
+    <Compile Include="Instances\IInstanceMap.cs" />
+    <Compile Include="Instances\Instance.cs" />
+    <Compile Include="Instances\InstanceDictionary.cs" />
+    <Compile Include="Instances\InstanceMap.cs" />
+    <Compile Include="Interceptors\IInterceptingProxy.cs" />
+    <Compile Include="Interceptors\IInterceptor.cs" />
+    <Compile Include="Interceptors\InstanceInterceptors\IInstanceInterceptor.cs" />
+    <Compile Include="Interceptors\InstanceInterceptors\InterfaceInterception\InterfaceInterceptor.cs" />
+    <Compile Include="Interceptors\InstanceInterceptors\InterfaceInterception\InterfaceInterceptorClassGenerator.cs" />
+    <Compile Include="Interceptors\InstanceInterceptors\InterfaceInterception\InterfaceInterceptorClassGenerator.Desktop.cs" />
+    <Compile Include="Interceptors\InstanceInterceptors\TransparentProxyInterception\InterceptingRealProxy.cs" />
+    <Compile Include="Interceptors\InstanceInterceptors\TransparentProxyInterception\TransparentProxyInterceptor.cs" />
+    <Compile Include="Interceptors\Intercept.cs" />
+    <Compile Include="Interceptors\InterceptHelper.cs" />
+    <Compile Include="Interceptors\InterceptionBehaviors\ExceptionInterceptionBehaviorContext.cs" />
+    <Compile Include="Interceptors\InterceptionBehaviors\InterceptionBehaviorAttribute.cs" />
+    <Compile Include="Interceptors\InterceptionBehaviors\InterceptionBehaviorContext.cs" />
+    <Compile Include="Interceptors\InterceptionBehaviors\InterceptionBehaviorHelper.cs" />
+    <Compile Include="Interceptors\TypeInterceptors\ITypeInterceptor.cs" />
+    <Compile Include="Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGenerator.cs" />
+    <Compile Include="Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGenerator.Desktop.cs" />
+    <Compile Include="Interceptors\TypeInterceptors\VirtualMethodInterception\VirtualMethodInterceptor.cs" />
+    <Compile Include="IObjectContainer.cs" />
+    <Compile Include="IRegistry.cs" />
+    <Compile Include="ObjectContainer.cs" />
+    <Compile Include="ObjectContainerFactory.cs" />
+    <Compile Include="Plugins\IPluginCollection.cs" />
+    <Compile Include="Plugins\IPluginMap.cs" />
+    <Compile Include="Plugins\Plugin.cs" />
+    <Compile Include="Plugins\PluginCollection.cs" />
+    <Compile Include="Plugins\PluginDictionary.cs" />
+    <Compile Include="Plugins\PluginMap.cs" />
+    <Compile Include="Plugins\PluginMapBuilder.cs" />
+    <Compile Include="Plugins\PluginType.cs" />
+    <Compile Include="CommonModel\TypeRules.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CommonModel\Registry.cs" />
+    <Compile Include="Resource.cs" />
+    <Compile Include="ServiceLocator.cs" />
+    <Compile Include="Configuration\TypeRegistryConfiguration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Interceptors\InstanceInterceptors\InterfaceInterception\read.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Artworks\Artworks.csproj">
+      <Project>{f93b3b11-949d-432b-80ef-d1f871fd44e0}</Project>
+      <Name>Artworks</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

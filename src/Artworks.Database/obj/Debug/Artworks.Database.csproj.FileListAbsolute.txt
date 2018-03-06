@@ -1,0 +1,7 @@
+E:\team\Packages\Artworks\src\Artworks.Database\bin\Debug\Artworks.Database.dll
+E:\team\Packages\Artworks\src\Artworks.Database\bin\Debug\Artworks.Database.pdb
+E:\team\Packages\Artworks\src\Artworks.Database\bin\Debug\Artworks.dll
+E:\team\Packages\Artworks\src\Artworks.Database\bin\Debug\Artworks.pdb
+E:\team\Packages\Artworks\src\Artworks.Database\obj\Debug\Artworks.Database.csprojResolveAssemblyReference.cache
+E:\team\Packages\Artworks\src\Artworks.Database\obj\Debug\Artworks.Database.dll
+E:\team\Packages\Artworks\src\Artworks.Database\obj\Debug\Artworks.Database.pdb

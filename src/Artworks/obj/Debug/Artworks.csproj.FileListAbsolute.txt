@@ -1,0 +1,4 @@
+E:\team\Packages\Artworks\src\Artworks\bin\Debug\Artworks.dll
+E:\team\Packages\Artworks\src\Artworks\bin\Debug\Artworks.pdb
+E:\team\Packages\Artworks\src\Artworks\obj\Debug\Artworks.dll
+E:\team\Packages\Artworks\src\Artworks\obj\Debug\Artworks.pdb

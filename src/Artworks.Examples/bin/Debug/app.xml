@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+
+  <!--框架配置-->
+  <artworks>
+    <add key="log" value="log.xml" desc="日志"/>
+    <add key="upload" value="upload.xml" desc="图片上传服务器"/>
+    <add key="seeds" value="App_Seeds" desc="种子存储路径"/>
+  </artworks>
+
+  <!--应用程序配置-->
+  <application>
+    <add key="" value=""/>
+  </application>
+
+  <!--数据库配置-->
+  <database>
+    <!--SqlServer-->
+    <!--
+    <type>SqlServer</type>
+    <connectionString>
+      <add key="db_connection_master" value="Data Source=localhost;Initial Catalog=Master;Persist Security Info=True;User ID=sa;Password=123456;"/>
+      <add key="db_connection_tester" value="Data Source=localhost;Initial Catalog=Master;Persist Security Info=True;User ID=sa;Password=123456;"/>
+    </connectionString>
+    -->
+    <!--MySQL-->
+    <type>MySQL</type>
+    <connectionString>
+      <add key="db_connection_master" value="Database=test;Data Source=127.0.0.1;User Id=root;Password=123456;pooling=false;CharSet=utf8;port=3306"/>
+      <add key="db_connection_tester" value="Database=world;Data Source=127.0.0.1;User Id=root;Password=123456;pooling=false;CharSet=utf8;port=3306"/>
+    </connectionString>
+  </database>
+
+  <!--异常配置-->
+  <exception>
+    <registry type="Artworks.Database.CommonModel.DatabaseException,Artworks.Database" behavior="Direct">
+      <handle>
+        <add type="Artworks.Examples.Codes.Exception.Code.DatabaseExceptionHandler,Artworks.Examples"/>
+      </handle>
+    </registry>
+    <registry type="Artworks.Infrastructure.Application.Service.CommonModel.ServiceException,Artworks.Infrastructure" behavior="Direct">
+      <handle>
+        <add type="Artworks.Examples.Codes.Exception.Code.ServiceExceptionHandler,Artworks.Examples"/>
+      </handle>
+    </registry>
+    <registry type="Artworks.Infrastructure.Application.Persistence.CommonModel.RepositoryException,Artworks.Infrastructure" behavior="Forward">
+      <handle>
+        <add type="Artworks.Examples.Codes.Exception.Code.RepositoryExceptionHandler,Artworks.Examples"/>
+      </handle>
+    </registry>
+  </exception>
+
+  <container>
+    <!--Dynamic/Singleton-->
+    <register  type="Artworks.Examples.Codes.Application.Code.Services.IUserService,Artworks.Examples"
+               mapTo="Artworks.Examples.Codes.Application.Code.Services.Internal.UserService,Artworks.Examples"
+               intercept="Artworks.Container.Interceptors.InstanceInterceptors.InterfaceInterception.InterfaceInterceptor,Artworks.Container"
+               mode="Dynamic" />
+
+
+    <register  type="Artworks.Examples.Codes.Application.Code.CommonModel.Contracts.IUserRepository,Artworks.Examples"
+               mapTo="Artworks.Examples.Codes.Application.Code.Repositories.UserRepository,Artworks.Examples"
+               intercept=""
+               mode="Dynamic" />
+
+  </container>
+
+
+  <!--执行计划-->
+  <schedule>
+    <add key="UserDataPlanProvider" value="Artworks.Examples.Codes.Cache.Code.Schedule.UserScheduleProvider,Artworks.Examples"/>
+  </schedule>
+
+  <!--缓存-->
+  <cache>
+    <type>Artworks.Cache.Aspnet.AspnetCache,Artworks.Cache</type>
+    <path>E:\cache\temp</path>
+  </cache>
+
+
+</configuration>
+

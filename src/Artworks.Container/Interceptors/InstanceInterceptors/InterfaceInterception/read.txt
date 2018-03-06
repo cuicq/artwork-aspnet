@@ -1,0 +1,6 @@
+﻿1.关于反射
+
+
+http://msdn.microsoft.com/query/dev11.query?appId=Dev11IDEF1&l=ZH-CN&k=k(System.Reflection.MethodInfo.MakeGenericMethod);k(MakeGenericMethod);k(SolutionItemsProject);k(TargetFrameworkMoniker-.NETFramework,Version%3Dv4.5);k(DevLang-csharp)&rd=true
+
+

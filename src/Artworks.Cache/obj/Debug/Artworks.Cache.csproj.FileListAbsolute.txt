@@ -1,0 +1,7 @@
+E:\team\Packages\Artworks\src\Artworks.Cache\bin\Debug\Artworks.Cache.dll
+E:\team\Packages\Artworks\src\Artworks.Cache\bin\Debug\Artworks.Cache.pdb
+E:\team\Packages\Artworks\src\Artworks.Cache\bin\Debug\Artworks.dll
+E:\team\Packages\Artworks\src\Artworks.Cache\bin\Debug\Artworks.pdb
+E:\team\Packages\Artworks\src\Artworks.Cache\obj\Debug\Artworks.Cache.dll
+E:\team\Packages\Artworks\src\Artworks.Cache\obj\Debug\Artworks.Cache.pdb
+E:\team\Packages\Artworks\src\Artworks.Cache\obj\Debug\Artworks.Cache.csprojResolveAssemblyReference.cache

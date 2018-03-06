@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA85D060-5027-4345-B6C0-70EB49AD0DEA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Artworks.Infrastructure</RootNamespace>
+    <AssemblyName>Artworks.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\ApplicationRuntime.cs" />
+    <Compile Include="Application\CommonModel\ApplicationException.cs" />
+    <Compile Include="Application\CommonModel\ApplicationExceptionHandler.cs" />
+    <Compile Include="Application\CommonModel\ApplicationStartupEventArgs.cs" />
+    <Compile Include="Application\CommonModel\ApplicationStopEventArgs.cs" />
+    <Compile Include="Application\CommonModel\Internal\ExceptionHelper.cs" />
+    <Compile Include="Application\CommonModel\RequsetContext.cs" />
+    <Compile Include="Application\CommonModel\ResponseResult.cs" />
+    <Compile Include="Application\Configuration\ApplicationConfiguration.cs" />
+    <Compile Include="Application\Domain\AggregateRoot.cs" />
+    <Compile Include="Application\Domain\IAggregateRoot.cs" />
+    <Compile Include="Application\Domain\IEntity.cs" />
+    <Compile Include="Application\Domain\IUnitOfWork.cs" />
+    <Compile Include="Application\Domain\IUnitOfWorkRepository.cs" />
+    <Compile Include="Application\IApplication.cs" />
+    <Compile Include="Application\Persistence\CommonModel\RepositoryException.cs" />
+    <Compile Include="Application\Persistence\DatabaseContext.cs" />
+    <Compile Include="Application\Persistence\IRepository.cs" />
+    <Compile Include="Application\Persistence\IRepositoryContext.cs" />
+    <Compile Include="Application\Persistence\Repository.cs" />
+    <Compile Include="Application\Persistence\RepositoryContext.cs" />
+    <Compile Include="Application\Query\CommonModel\Connector.cs" />
+    <Compile Include="Application\Query\CommonModel\Operator.cs" />
+    <Compile Include="Application\Query\CommonModel\PagedResultcs.cs" />
+    <Compile Include="Application\Query\CommonModel\QueryChain.cs" />
+    <Compile Include="Application\Query\CommonModel\QueryObjectException.cs" />
+    <Compile Include="Application\Query\CommonModel\Sorter.cs" />
+    <Compile Include="Application\Query\CommonModel\SorterDirection.cs" />
+    <Compile Include="Application\Query\Filter.cs" />
+    <Compile Include="Application\Query\FilterDefinition.cs" />
+    <Compile Include="Application\Query\FilterGroup.cs" />
+    <Compile Include="Application\Query\IFilter.cs" />
+    <Compile Include="Application\Query\Internal\ClauseExtentions.cs" />
+    <Compile Include="Application\Query\Internal\PropertyNameHelper.cs" />
+    <Compile Include="Application\Query\Internal\WhereClause.cs" />
+    <Compile Include="Application\Query\QueryObject.cs" />
+    <Compile Include="Application\Query\QueryObjectExtentions.cs" />
+    <Compile Include="Application\Service\ApplicationService.cs" />
+    <Compile Include="Application\Service\CommonModel\AggregateRootService.cs" />
+    <Compile Include="Application\Service\CommonModel\ServiceException.cs" />
+    <Compile Include="Application\Service\IAggregateRootService.cs" />
+    <Compile Include="Application\Service\IApplicationService.cs" />
+    <Compile Include="Application\Validation\CommonModel\ValidationError.cs" />
+    <Compile Include="Application\Validation\CommonModel\ValidationErrorCollection.cs" />
+    <Compile Include="Application\Validation\CommonModel\ValidationException.cs" />
+    <Compile Include="Application\Validation\CommonModel\ValidationState.cs" />
+    <Compile Include="Application\Validation\CommonModel\ValidationStateDictionary.cs" />
+    <Compile Include="Application\Validation\IValidationService.cs" />
+    <Compile Include="Application\Validation\IValidator.cs" />
+    <Compile Include="Application\Validation\ValidationService.cs" />
+    <Compile Include="Application\Validation\ValidatorBase.cs" />
+    <Compile Include="Application\WebApplication.cs" />
+    <Compile Include="Application\Web\IHandler.cs" />
+    <Compile Include="Application\Web\Security\AccountAuthentication.cs" />
+    <Compile Include="Application\Web\Security\AccountAuthenticationHttpModule.cs" />
+    <Compile Include="Application\Web\Security\AccountIdentity.cs" />
+    <Compile Include="Application\Web\Security\AccountPrincipal.cs" />
+    <Compile Include="Application\Web\Security\AuthenticationClientData.cs" />
+    <Compile Include="Application\Web\Security\IAccountIdentity.cs" />
+    <Compile Include="Application\Web\Security\Internal\ConfigUtil.cs" />
+    <Compile Include="Application\Web\Security\Internal\Cyptography.cs" />
+    <Compile Include="Application\Web\WebHandler.cs" />
+    <Compile Include="Application\Web\WebPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Artworks.Container\Artworks.Container.csproj">
+      <Project>{3fa050f1-107b-4bdd-8428-9404384ff818}</Project>
+      <Name>Artworks.Container</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Artworks.Database\Artworks.Database.csproj">
+      <Project>{95569fc7-c23a-4f6d-acb7-0ff282561956}</Project>
+      <Name>Artworks.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Artworks.Log\Artworks.Log.csproj">
+      <Project>{60efb555-8785-46f9-a637-a52edb82fca9}</Project>
+      <Name>Artworks.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Artworks.Utility\Artworks.Utility.csproj">
+      <Project>{784b7aaf-3a47-466d-916a-08d2267939e6}</Project>
+      <Name>Artworks.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Artworks\Artworks.csproj">
+      <Project>{f93b3b11-949d-432b-80ef-d1f871fd44e0}</Project>
+      <Name>Artworks</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

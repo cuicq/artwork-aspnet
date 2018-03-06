@@ -1,0 +1,7 @@
+E:\team\Packages\Artworks\src\Artworks.Container\bin\Debug\Artworks.Container.dll
+E:\team\Packages\Artworks\src\Artworks.Container\bin\Debug\Artworks.Container.pdb
+E:\team\Packages\Artworks\src\Artworks.Container\bin\Debug\Artworks.dll
+E:\team\Packages\Artworks\src\Artworks.Container\bin\Debug\Artworks.pdb
+E:\team\Packages\Artworks\src\Artworks.Container\obj\Debug\Artworks.Container.csprojResolveAssemblyReference.cache
+E:\team\Packages\Artworks\src\Artworks.Container\obj\Debug\Artworks.Container.dll
+E:\team\Packages\Artworks\src\Artworks.Container\obj\Debug\Artworks.Container.pdb

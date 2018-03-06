@@ -1,0 +1,7 @@
+E:\team\Packages\Artworks\src\Artworks.Log\bin\Debug\Artworks.Log.dll
+E:\team\Packages\Artworks\src\Artworks.Log\bin\Debug\Artworks.Log.pdb
+E:\team\Packages\Artworks\src\Artworks.Log\bin\Debug\Artworks.dll
+E:\team\Packages\Artworks\src\Artworks.Log\bin\Debug\Artworks.pdb
+E:\team\Packages\Artworks\src\Artworks.Log\obj\Debug\Artworks.Log.csprojResolveAssemblyReference.cache
+E:\team\Packages\Artworks\src\Artworks.Log\obj\Debug\Artworks.Log.dll
+E:\team\Packages\Artworks\src\Artworks.Log\obj\Debug\Artworks.Log.pdb

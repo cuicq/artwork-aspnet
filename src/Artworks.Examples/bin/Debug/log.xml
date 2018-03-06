@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <logger>
+    <section>
+      <name>debug</name>
+      <repository>
+        <type>Artworks.Log.Persistence.FileRepository,Artworks.Log</type>
+        <construction>
+          <param name="name" value="debug"/>
+          <param name="file" value="/log/debug/{yyyyMMddHH}.txt"/>
+          <!--存储路径设置 auto自动 none默认-->
+          <param name="storage" value="auto"/>
+        </construction>
+      </repository>
+    </section>
+    <section>
+      <name>error</name>
+      <repository>
+        <type>Artworks.Log.Persistence.FileRepository,Artworks.Log</type>
+        <construction>
+          <param name="name" value="error"/>
+          <param name="file" value="D:/log/error/{yyyy-MM-dd HH:mm:ss}.txt"/>
+          <!--路径设置 auto自动 none默认-->
+          <param name="storage" value="none"/>
+        </construction>
+      </repository>
+    </section>
+    <section>
+      <name>info</name>
+      <repository>
+        <type>Artworks.Log.Persistence.FileRepository,Artworks.Log</type>
+        <construction>
+          <param name="name" value="info"/>
+          <param name="file" value="D:/log/info/{yyyy-MM-dd HH:mm:ss}.txt"/>
+          <!--路径设置 auto自动 none默认-->
+          <param name="storage" value="none"/>
+        </construction>
+      </repository>
+    </section>
+    <section>
+      <name>fatal</name>
+      <repository>
+        <type>Artworks.Log.Persistence.FileRepository,Artworks.Log</type>
+        <construction>
+          <param name="name" value="fatal"/>
+          <param name="file" value="D:/log/fatal/{yyyy-MM-dd HH:mm:ss}.txt"/>
+          <!--路径设置 auto自动 none默认-->
+          <param name="storage" value="auto"/>
+        </construction>
+      </repository>
+    </section>
+    <section>
+      <name>warn</name>
+      <repository>
+        <type>Artworks.Log.Persistence.FileRepository,Artworks.Log</type>
+        <construction>
+          <param name="name" value="warn"/>
+          <param name="file" value="D:/log/warn/{yyyy-MM-dd HH:mm:ss}.txt"/>
+          <!--路径设置 auto自动 none默认-->
+          <param name="storage" value="auto"/>
+        </construction>
+      </repository>
+    </section>
+  </logger>
+</configuration>

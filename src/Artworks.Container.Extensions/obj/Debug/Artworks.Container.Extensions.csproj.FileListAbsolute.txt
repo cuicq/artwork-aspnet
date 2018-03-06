@@ -1,0 +1,10 @@
+E:\team\Packages\Artworks\src\Artworks.Container.Extensions\bin\Debug\Artworks.Container.Extensions.dll
+E:\team\Packages\Artworks\src\Artworks.Container.Extensions\bin\Debug\Artworks.Container.Extensions.pdb
+E:\team\Packages\Artworks\src\Artworks.Container.Extensions\bin\Debug\Artworks.Container.dll
+E:\team\Packages\Artworks\src\Artworks.Container.Extensions\bin\Debug\Artworks.dll
+E:\team\Packages\Artworks\src\Artworks.Container.Extensions\bin\Debug\StructureMap.dll
+E:\team\Packages\Artworks\src\Artworks.Container.Extensions\bin\Debug\Artworks.Container.pdb
+E:\team\Packages\Artworks\src\Artworks.Container.Extensions\bin\Debug\Artworks.pdb
+E:\team\Packages\Artworks\src\Artworks.Container.Extensions\obj\Debug\Artworks.Container.Extensions.csprojResolveAssemblyReference.cache
+E:\team\Packages\Artworks\src\Artworks.Container.Extensions\obj\Debug\Artworks.Container.Extensions.dll
+E:\team\Packages\Artworks\src\Artworks.Container.Extensions\obj\Debug\Artworks.Container.Extensions.pdb

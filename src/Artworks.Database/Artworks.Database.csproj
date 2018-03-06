@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95569FC7-C23A-4F6D-ACB7-0FF282561956}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Artworks.Database</RootNamespace>
+    <AssemblyName>Artworks.Database</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonModel\Internal\ExceptionHelper.cs" />
+    <Compile Include="CommonModel\Internal\DatabaseConnectionStringKey.cs" />
+    <Compile Include="CommonModel\DatabaseConnectionStringManager.cs" />
+    <Compile Include="CommonModel\DatabaseException.cs" />
+    <Compile Include="CommonModel\DatabaseType.cs" />
+    <Compile Include="CommonModel\DataTableHelper.cs" />
+    <Compile Include="CommonModel\OperationException.cs" />
+    <Compile Include="Configuration\DatabaseRegistryConfiguration.cs" />
+    <Compile Include="Core\DataParameterProvider.cs" />
+    <Compile Include="Core\DataProvider.cs" />
+    <Compile Include="Core\MySql\MySqlDataProvider.cs" />
+    <Compile Include="Core\MySql\MySqlParameter.cs" />
+    <Compile Include="Core\SqlServer\SqlServerDataProvider.cs" />
+    <Compile Include="Core\SqlServer\SqlServerParameter.cs" />
+    <Compile Include="DatabaseOperator.cs" />
+    <Compile Include="DataParameter.cs" />
+    <Compile Include="Extensions\DataTableExtensions.cs" />
+    <Compile Include="Extensions\datatable_test.cs" />
+    <Compile Include="IDataProvider.cs" />
+    <Compile Include="Initialize\DatabaseInitializerContainer.cs" />
+    <Compile Include="Initialize\IDatabaseInitializer.cs" />
+    <Compile Include="Initialize\Internal\SqlCeInitializer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuration\Internal\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Artworks\Artworks.csproj">
+      <Project>{f93b3b11-949d-432b-80ef-d1f871fd44e0}</Project>
+      <Name>Artworks</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

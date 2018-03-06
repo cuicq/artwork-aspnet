@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00B7E3A8-0363-4964-BD91-64562AAE1B9B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Artworks.Examples</RootNamespace>
+    <AssemblyName>Artworks.Examples</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="App_Code\AppStartup.cs" />
+    <Compile Include="App_Code\DatabaseConnectionStringKey.cs" />
+    <Compile Include="Codes\Application\Code\Behaviors\LogAttribute.cs" />
+    <Compile Include="Codes\Application\Code\CommonModel\Contracts\IUserRepository.cs" />
+    <Compile Include="Codes\Application\Code\CommonModel\Model.cs" />
+    <Compile Include="Codes\Application\Code\PluginRegistry.cs" />
+    <Compile Include="Codes\Application\Code\Repositories\UserRepository.cs" />
+    <Compile Include="Codes\Application\Code\Services\Internal\UserService.cs" />
+    <Compile Include="Codes\Application\Code\Services\IUserService.cs" />
+    <Compile Include="Codes\Application\Code\WebApp.cs" />
+    <Compile Include="Codes\Application\UnitTest1.cs" />
+    <Compile Include="Codes\Cache\Code\CacheFile.cs" />
+    <Compile Include="Codes\Cache\Code\CacheKey.cs" />
+    <Compile Include="Codes\Cache\Code\Model\User.cs" />
+    <Compile Include="Codes\Cache\Code\Schedule\UserDAL.cs" />
+    <Compile Include="Codes\Cache\Code\Schedule\UserScheduleProvider.cs" />
+    <Compile Include="Codes\Cache\Code\UserData.cs" />
+    <Compile Include="Codes\Cache\UnitTest1.cs" />
+    <Compile Include="Codes\CodeRules\UnitTest1.cs" />
+    <Compile Include="Codes\Database\Code\Class1.cs" />
+    <Compile Include="Codes\Database\Code\DatabaseOperator.cs" />
+    <Compile Include="Codes\Database\UnitTest1.cs" />
+    <Compile Include="Codes\Exception\Code\DatabaseExceptionHandler.cs" />
+    <Compile Include="Codes\Exception\Code\RepositoryExceptionHandler.cs" />
+    <Compile Include="Codes\Exception\Code\ServiceExceptionHandler.cs" />
+    <Compile Include="Codes\Exception\UnitTest1.cs" />
+    <Compile Include="Codes\Log\UnitTest1.cs" />
+    <Compile Include="Codes\QueryObjects\Model\Model.cs" />
+    <Compile Include="Codes\QueryObjects\UnitTest1.cs" />
+    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\app.xml" />
+    <Content Include="bin\Debug\log.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Artworks.Authorization\Artworks.Authorization.csproj">
+      <Project>{7c7932ba-7c79-4cde-b906-f412f62e1c5d}</Project>
+      <Name>Artworks.Authorization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Artworks.Cache\Artworks.Cache.csproj">
+      <Project>{fda2ca77-78c5-491f-a54b-b9c9ae00061a}</Project>
+      <Name>Artworks.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Artworks.CodeRule\Artworks.CodeRule.csproj">
+      <Project>{ee2fc872-9b8a-4c85-ac87-7e9504932c96}</Project>
+      <Name>Artworks.CodeRule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Artworks.Container.Extensions\Artworks.Container.Extensions.csproj">
+      <Project>{a3b6de92-0788-4d6a-a0f2-ea7dc888a085}</Project>
+      <Name>Artworks.Container.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Artworks.Container\Artworks.Container.csproj">
+      <Project>{3fa050f1-107b-4bdd-8428-9404384ff818}</Project>
+      <Name>Artworks.Container</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Artworks.Database\Artworks.Database.csproj">
+      <Project>{95569fc7-c23a-4f6d-acb7-0ff282561956}</Project>
+      <Name>Artworks.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Artworks.Infrastructure\Artworks.Infrastructure.csproj">
+      <Project>{da85d060-5027-4345-b6c0-70eb49ad0dea}</Project>
+      <Name>Artworks.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Artworks.Log\Artworks.Log.csproj">
+      <Project>{60efb555-8785-46f9-a637-a52edb82fca9}</Project>
+      <Name>Artworks.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Artworks.Routing\Artworks.Routing.csproj">
+      <Project>{de6ff849-2a9f-4655-b868-e650422115fc}</Project>
+      <Name>Artworks.Routing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Artworks.Utility\Artworks.Utility.csproj">
+      <Project>{784b7aaf-3a47-466d-916a-08d2267939e6}</Project>
+      <Name>Artworks.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Artworks\Artworks.csproj">
+      <Project>{f93b3b11-949d-432b-80ef-d1f871fd44e0}</Project>
+      <Name>Artworks</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,12 @@
+------2016/4/19 22:06:07  execute sql Artworks.Database.CommonModel.DatabaseException: insert into t_user(t_id,t_name,t_createdate)values(@t_id,@t_name,@t_createdate) ---> MySql.Data.MySqlClient.MySqlException: Unknown column 't_createdate' in 'field list'
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 Artworks.Database.Core.MySql.MySqlDataProvider.ExecuteNonQuery(String cmdText, CommandType cmdType, DbParameter[] parameters) 位置 e:\team\Packages\Artworks\src\Artworks.Database\Core\MySql\MySqlDataProvider.cs:行号 121
+   --- 内部异常堆栈跟踪的结尾 ---
+------2016/4/19 22:06:36   Table dbo.[t_user] insert data failed.

@@ -1,0 +1,15 @@
+E:\team\Packages\Artworks\src\Artworks.Infrastructure\bin\Debug\Artworks.Infrastructure.dll
+E:\team\Packages\Artworks\src\Artworks.Infrastructure\bin\Debug\Artworks.Infrastructure.pdb
+E:\team\Packages\Artworks\src\Artworks.Infrastructure\bin\Debug\Artworks.Container.dll
+E:\team\Packages\Artworks\src\Artworks.Infrastructure\bin\Debug\Artworks.Database.dll
+E:\team\Packages\Artworks\src\Artworks.Infrastructure\bin\Debug\Artworks.dll
+E:\team\Packages\Artworks\src\Artworks.Infrastructure\bin\Debug\Artworks.Log.dll
+E:\team\Packages\Artworks\src\Artworks.Infrastructure\bin\Debug\Artworks.Utility.dll
+E:\team\Packages\Artworks\src\Artworks.Infrastructure\bin\Debug\Artworks.Container.pdb
+E:\team\Packages\Artworks\src\Artworks.Infrastructure\bin\Debug\Artworks.Database.pdb
+E:\team\Packages\Artworks\src\Artworks.Infrastructure\bin\Debug\Artworks.Log.pdb
+E:\team\Packages\Artworks\src\Artworks.Infrastructure\bin\Debug\Artworks.Utility.pdb
+E:\team\Packages\Artworks\src\Artworks.Infrastructure\bin\Debug\Artworks.pdb
+E:\team\Packages\Artworks\src\Artworks.Infrastructure\obj\Debug\Artworks.Infrastructure.csprojResolveAssemblyReference.cache
+E:\team\Packages\Artworks\src\Artworks.Infrastructure\obj\Debug\Artworks.Infrastructure.dll
+E:\team\Packages\Artworks\src\Artworks.Infrastructure\obj\Debug\Artworks.Infrastructure.pdb

@@ -1,0 +1,14 @@
+------2016/4/19 21:58:53  execute sql Artworks.Database.CommonModel.DatabaseException: insert into t_user(t_id,t_name,t_createdate)values(@t_id,@t_name,@t_createdate) ---> MySql.Data.MySqlClient.MySqlException: Fatal error encountered during command execution. ---> MySql.Data.MySqlClient.MySqlException: Parameter '@t_createdate' must be defined.
+   在 MySql.Data.MySqlClient.Statement.SerializeParameter(MySqlParameterCollection parameters, MySqlPacket packet, String parmName, Int32 parameterIndex)
+   在 MySql.Data.MySqlClient.Statement.InternalBindParameters(String sql, MySqlParameterCollection parameters, MySqlPacket packet)
+   在 MySql.Data.MySqlClient.Statement.BindParameters()
+   在 MySql.Data.MySqlClient.Statement.Execute()
+   在 MySql.Data.MySqlClient.PreparableStatement.Execute()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 Artworks.Database.Core.MySql.MySqlDataProvider.ExecuteNonQuery(String cmdText, CommandType cmdType, DbParameter[] parameters) 位置 e:\team\Packages\Artworks\src\Artworks.Database\Core\MySql\MySqlDataProvider.cs:行号 121
+   --- 内部异常堆栈跟踪的结尾 ---
+------2016/4/19 21:59:02   Table dbo.[t_user] insert data failed.

@@ -1,0 +1,9 @@
+E:\team\Packages\Artworks\src\Artworks.CodeRule\bin\Debug\Artworks.CodeRule.dll
+E:\team\Packages\Artworks\src\Artworks.CodeRule\bin\Debug\Artworks.CodeRule.pdb
+E:\team\Packages\Artworks\src\Artworks.CodeRule\bin\Debug\Artworks.dll
+E:\team\Packages\Artworks\src\Artworks.CodeRule\bin\Debug\Artworks.Utility.dll
+E:\team\Packages\Artworks\src\Artworks.CodeRule\bin\Debug\Artworks.Utility.pdb
+E:\team\Packages\Artworks\src\Artworks.CodeRule\bin\Debug\Artworks.pdb
+E:\team\Packages\Artworks\src\Artworks.CodeRule\obj\Debug\Artworks.CodeRule.csprojResolveAssemblyReference.cache
+E:\team\Packages\Artworks\src\Artworks.CodeRule\obj\Debug\Artworks.CodeRule.dll
+E:\team\Packages\Artworks\src\Artworks.CodeRule\obj\Debug\Artworks.CodeRule.pdb

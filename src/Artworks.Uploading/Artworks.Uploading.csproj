@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{214872DE-A16B-43CF-80E4-BABB46A97318}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Artworks.Uploading</RootNamespace>
+    <AssemblyName>Artworks.Uploading</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonModel\GenerateContext.cs" />
+    <Compile Include="CommonModel\GenerateType.cs" />
+    <Compile Include="CommonModel\Internal\ReturnMessage.cs" />
+    <Compile Include="CommonModel\Internal\Tool.cs" />
+    <Compile Include="CommonModel\Internal\WaterMarkType.cs" />
+    <Compile Include="CommonModel\GenerateArguments.cs" />
+    <Compile Include="CommonModel\GenerateValidator.cs" />
+    <Compile Include="Generators\CompositePictureGenerator.cs" />
+    <Compile Include="Generators\EqualRatioPictureGenerator.cs" />
+    <Compile Include="Generators\HeightSidePictureGenerator.cs" />
+    <Compile Include="Generators\TailorPictureGenerator.cs" />
+    <Compile Include="Generators\OriginPictureGenerator.cs" />
+    <Compile Include="IPictureGenerator.cs" />
+    <Compile Include="CommonModel\PictureGenerateRegistry.cs" />
+    <Compile Include="Configuration\Internal\PictureGenerateRegistryConfiguration.cs" />
+    <Compile Include="IUploadHandler.cs" />
+    <Compile Include="PictureGenerator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UploadHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Artworks.Infrastructure\Artworks.Infrastructure.csproj">
+      <Project>{da85d060-5027-4345-b6c0-70eb49ad0dea}</Project>
+      <Name>Artworks.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Artworks.Utility\Artworks.Utility.csproj">
+      <Project>{784b7aaf-3a47-466d-916a-08d2267939e6}</Project>
+      <Name>Artworks.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Artworks\Artworks.csproj">
+      <Project>{f93b3b11-949d-432b-80ef-d1f871fd44e0}</Project>
+      <Name>Artworks</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
